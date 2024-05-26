@@ -1,5 +1,5 @@
 package repository
-
+//adapter
 import "errors"
 
 type customerRepositoryMock struct {

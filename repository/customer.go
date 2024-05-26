@@ -1,6 +1,6 @@
 package repository
 
-//user
+//port
 type Customer struct {
 	CustomerID  int    `db:"customer_id"`
 	Name        string `db:"name"`

@@ -1,5 +1,5 @@
 package service
-
+//adapter
 import (
 	"bank/repository"
 	"database/sql"

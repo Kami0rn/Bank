@@ -37,9 +37,11 @@ func main() {
 	}
 
 	customerRepositoryDB := repository.NewCustomerRepositoryDB(db)
+	// customerRepositoryMock := repository.NewCustomerRepositoryMock()
+	//can switch mock this line
 	customerService := service.NewCustomerService(customerRepositoryDB)
 	customerHandler := handler.NewCustomerHandler(customerService)
-
+	
 	router := mux.NewRouter()
 	router.HandleFunc("/customer", customerHandler.GetCustomers).Methods(http.MethodGet)
 	router.HandleFunc("/customer/{customerID:[0-9]+}", customerHandler.Getcustomer).Methods(http.MethodGet)
